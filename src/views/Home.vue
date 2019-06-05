@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-layout row wrap justify-space-around>
+    <v-flex xs12 sm6 md4>
+      <HomeCarousel/>
+    </v-flex>
+    <v-flex xs12 sm6 md4>
+      <HomeAction/>
+    </v-flex>
+    <v-flex xs12 sm6 md4>
+      <TextCard/>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import HomeCarousel from "@/components/HomeCarousel";
+import TextCard from "@/components/TextCard";
+import HomeAction from "@/components/HomeAction";
 export default {
-  name: 'home',
   components: {
-    HelloWorld
+    HomeCarousel,
+    TextCard,
+    HomeAction
   }
-}
+};
 </script>
+
+<style scoped>
+.layout>div{
+  padding: 5px;
+}
+</style>
+
+

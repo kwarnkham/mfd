@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    homeComponentHeight:300,
+    homeComponentWidth: 400
   },
   mutations: {
 
